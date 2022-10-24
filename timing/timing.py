@@ -19,6 +19,12 @@ def sum_multiples(mults, N):
     return total
 
 
+def sum_multiples(mults, N):
+    total = 0
+    for test_mult in mults:
+        total += sum(range(test_mult, N+1, test_mult))
+    return total
+
 # Testing
 assert sum_multiples([2, 3], 10) == (2 + 4 + 6 + 8 + 10) + (3 + 6 + 9)
 assert sum_multiples([10, 20, 4], 25) == (10 + 20) + 20 + (4 + 8 + 12 + 16 + 20 + 24)
